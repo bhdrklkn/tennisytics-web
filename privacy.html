@@ -121,7 +121,11 @@
       document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
       localStorage.setItem('tny_lang', lang);
     }
-    var saved = localStorage.getItem('tny_lang') || 'en';
+    var saved = localStorage.getItem('tny_lang');
+    if (!saved) {
+      var browserLang = navigator.language || navigator.userLanguage || 'en';
+      saved = browserLang.toLowerCase().startsWith('tr') ? 'tr' : 'en';
+    }
     setLang(saved);
   </script>
 
