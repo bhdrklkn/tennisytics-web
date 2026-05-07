@@ -130,10 +130,9 @@ nav {
 .store-btn .store-label { font-size: 11px; font-weight: 400; opacity: 0.8; display: block; }
 .store-btn .store-name { font-size: 15px; font-weight: 700; display: block; line-height: 1.1; }
 
-.store-buttons-img {
-  max-width: 520px;
-  width: 100%;
-  height: auto;
+.store-btn-img {
+  height: 54px;
+  width: auto;
 }
 
 /* FEATURES */
