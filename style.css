@@ -109,30 +109,42 @@ nav {
 .store-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: var(--primary);
   border: 1.5px solid var(--primary);
-  border-radius: 12px;
-  padding: 12px 22px;
+  border-radius: 14px;
+  padding: 12px 24px;
   color: var(--white);
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, transform 0.15s;
+  min-width: 180px;
 }
 
 .store-btn:hover {
   background: #414d6b;
-  border-color: #414d6b;
+  transform: translateY(-2px);
 }
 
-.store-btn .store-icon { font-size: 22px; }
-.store-btn .store-label { font-size: 11px; font-weight: 400; opacity: 0.8; display: block; }
-.store-btn .store-name { font-size: 15px; font-weight: 700; display: block; line-height: 1.1; }
+.store-btn-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
 
-.store-btn-img {
-  height: 54px;
-  width: auto;
+.store-btn-label {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.8;
+  display: block;
+  letter-spacing: 0.3px;
+}
+
+.store-btn-name {
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
 }
 
 /* FEATURES */
