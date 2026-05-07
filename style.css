@@ -146,6 +146,22 @@ nav {
   letter-spacing: -0.3px;
 }
 
+.store-badge-btn {
+  display: inline-block;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.store-badge-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.store-badge-svg {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+
 /* FEATURES */
 .features {
   background: var(--mid);
