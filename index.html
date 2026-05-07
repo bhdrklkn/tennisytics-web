@@ -11,30 +11,36 @@
 
   <nav>
     <span class="nav-logo">🎾 Tennisytics</span>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="privacy.html">Privacy</a>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="nav-links">
+        <a href="#features" data-en="Features" data-tr="Özellikler">Features</a>
+        <a href="#pricing" data-en="Pricing" data-tr="Fiyatlar">Pricing</a>
+        <a href="privacy.html" data-en="Privacy" data-tr="Gizlilik">Privacy</a>
+      </div>
+      <div class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button id="btn-tr" class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-badge">🎾 Tennis Analytics App</div>
-    <h1>The smarter way to<br/><span>coach tennis</span></h1>
-    <p>Track matches in real time, analyze player statistics, and take your coaching to the next level.</p>
+    <h1 data-en="The smarter way to<br/><span>coach tennis</span>" data-tr="Tenis koçluğunun<br/><span>akıllı yolu</span>">The smarter way to<br/><span>coach tennis</span></h1>
+    <p data-en="Track matches in real time, analyze player statistics, and take your coaching to the next level." data-tr="Maçları gerçek zamanlı takip et, oyuncu istatistiklerini analiz et ve koçluğunu bir üst seviyeye taşı.">Track matches in real time, analyze player statistics, and take your coaching to the next level.</p>
     <div class="store-buttons">
       <a href="#" class="store-btn" id="playstore-btn">
         <span class="store-icon">▶</span>
         <span>
-          <span class="store-label">Get it on</span>
+          <span class="store-label" data-en="Get it on" data-tr="İndir">Get it on</span>
           <span class="store-name">Google Play</span>
         </span>
       </a>
       <a href="#" class="store-btn" id="appstore-btn">
         <span class="store-icon"></span>
         <span>
-          <span class="store-label">Download on the</span>
+          <span class="store-label" data-en="Download on the" data-tr="İndir">Download on the</span>
           <span class="store-name">App Store</span>
         </span>
       </a>
@@ -43,68 +49,68 @@
 
   <!-- FEATURES -->
   <section class="features" id="features">
-    <h2 class="section-title">Everything a coach needs</h2>
-    <p class="section-sub">From live scoring to deep statistics — all in one app</p>
+    <h2 class="section-title" data-en="Everything a coach needs" data-tr="Bir koçun ihtiyacı olan her şey">Everything a coach needs</h2>
+    <p class="section-sub" data-en="From live scoring to deep statistics — all in one app" data-tr="Canlı skordan detaylı istatistiklere — hepsi tek uygulamada">From live scoring to deep statistics — all in one app</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">📊</div>
-        <h3>Live Match Tracking</h3>
-        <p>Score points in real time with a single tap. Automatic set and match calculation.</p>
+        <h3 data-en="Live Match Tracking" data-tr="Canlı Maç Takibi">Live Match Tracking</h3>
+        <p data-en="Score points in real time with a single tap. Automatic set and match calculation." data-tr="Tek dokunuşla gerçek zamanlı skor tut. Otomatik set ve maç hesaplama.">Score points in real time with a single tap. Automatic set and match calculation.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📈</div>
-        <h3>Player Statistics</h3>
-        <p>Win rates, first serve percentages, ace counts, and detailed match history for every player.</p>
+        <h3 data-en="Player Statistics" data-tr="Oyuncu İstatistikleri">Player Statistics</h3>
+        <p data-en="Win rates, first serve percentages, ace counts, and detailed match history for every player." data-tr="Kazanma oranları, ilk servis yüzdeleri, as sayıları ve her oyuncu için detaylı maç geçmişi.">Win rates, first serve percentages, ace counts, and detailed match history for every player.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">👥</div>
-        <h3>Player Profiles</h3>
-        <p>Manage your entire roster. Track each player's progress over time.</p>
+        <h3 data-en="Player Profiles" data-tr="Oyuncu Profilleri">Player Profiles</h3>
+        <p data-en="Manage your entire roster. Track each player's progress over time." data-tr="Tüm oyuncu kadronunu yönet. Her oyuncunun gelişimini zaman içinde takip et.">Manage your entire roster. Track each player's progress over time.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h3>Instant Sharing</h3>
-        <p>Share live match links with parents so they can follow the score in real time.</p>
+        <h3 data-en="Instant Sharing" data-tr="Anlık Paylaşım">Instant Sharing</h3>
+        <p data-en="Share live match links with parents so they can follow the score in real time." data-tr="Velilerle canlı maç linkini paylaş, skoru gerçek zamanlı takip etsinler.">Share live match links with parents so they can follow the score in real time.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔄</div>
-        <h3>Works Offline</h3>
-        <p>Record matches without internet. Data syncs automatically when you're back online.</p>
+        <h3 data-en="Works Offline" data-tr="Çevrimdışı Çalışır">Works Offline</h3>
+        <p data-en="Record matches without internet. Data syncs automatically when you're back online." data-tr="İnternetsiz maç kaydet. Bağlantıya geçince veriler otomatik senkronize olur.">Record matches without internet. Data syncs automatically when you're back online.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏆</div>
-        <h3>Head-to-Head Stats</h3>
-        <p>Compare two players and see detailed opponent history.</p>
+        <h3 data-en="Head-to-Head Stats" data-tr="Karşılıklı İstatistikler">Head-to-Head Stats</h3>
+        <p data-en="Compare two players and see detailed opponent history." data-tr="İki oyuncuyu karşılaştır ve detaylı rakip geçmişini gör.">Compare two players and see detailed opponent history.</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
   <section class="pricing" id="pricing">
-    <h2 class="section-title">Simple pricing</h2>
-    <p class="section-sub">Start free. Upgrade when you're ready.</p>
+    <h2 class="section-title" data-en="Simple pricing" data-tr="Sade fiyatlandırma">Simple pricing</h2>
+    <p class="section-sub" data-en="Start free. Upgrade when you're ready." data-tr="Ücretsiz başla. Hazır olduğunda yükselt.">Start free. Upgrade when you're ready.</p>
     <div class="pricing-grid">
       <div class="pricing-card">
-        <div class="pricing-name">Free</div>
+        <div class="pricing-name" data-en="Free" data-tr="Ücretsiz">Free</div>
         <div class="pricing-price">$0</div>
-        <div class="pricing-period">forever</div>
+        <div class="pricing-period" data-en="forever" data-tr="sonsuza kadar">forever</div>
         <ul class="pricing-features">
-          <li>1 player profile</li>
-          <li>3 matches</li>
-          <li>All statistics</li>
-          <li>Live match sharing</li>
+          <li data-en="1 player profile" data-tr="1 oyuncu profili">1 player profile</li>
+          <li data-en="3 matches" data-tr="3 maç">3 matches</li>
+          <li data-en="All statistics" data-tr="Tüm istatistikler">All statistics</li>
+          <li data-en="Live match sharing" data-tr="Canlı maç paylaşımı">Live match sharing</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-badge" data-en="Most Popular" data-tr="En Popüler">Most Popular</div>
         <div class="pricing-name">Premium</div>
         <div class="pricing-price">$4.99</div>
-        <div class="pricing-period">per month · or $29.99/year</div>
+        <div class="pricing-period" data-en="per month · or $29.99/year" data-tr="aylık · veya $29.99/yıl">per month · or $29.99/year</div>
         <ul class="pricing-features">
-          <li>Unlimited players</li>
-          <li>Unlimited matches</li>
-          <li>All statistics</li>
-          <li>Live match sharing</li>
+          <li data-en="Unlimited players" data-tr="Sınırsız oyuncu">Unlimited players</li>
+          <li data-en="Unlimited matches" data-tr="Sınırsız maç">Unlimited matches</li>
+          <li data-en="All statistics" data-tr="Tüm istatistikler">All statistics</li>
+          <li data-en="Live match sharing" data-tr="Canlı maç paylaşımı">Live match sharing</li>
         </ul>
       </div>
     </div>
@@ -112,11 +118,25 @@
 
   <footer>
     <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:bhdrklkn09@gmail.com">Contact</a>
+      <a href="privacy.html" data-en="Privacy Policy" data-tr="Gizlilik Politikası">Privacy Policy</a>
+      <a href="mailto:bhdrklkn09@gmail.com" data-en="Contact" data-tr="İletişim">Contact</a>
     </div>
-    <div>© 2025 Tennisytics. All rights reserved.</div>
+    <div>© 2025 Tennisytics. <span data-en="All rights reserved." data-tr="Tüm hakları saklıdır.">All rights reserved.</span></div>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        var text = el.getAttribute('data-' + lang);
+        if (text) el.innerHTML = text;
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      localStorage.setItem('tny_lang', lang);
+    }
+    var saved = localStorage.getItem('tny_lang') || 'en';
+    setLang(saved);
+  </script>
 
 </body>
 </html>

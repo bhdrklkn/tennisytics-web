@@ -10,76 +10,120 @@
 
   <nav>
     <a href="index.html" class="nav-logo">🎾 Tennisytics</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="mailto:bhdrklkn09@gmail.com">Contact</a>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="nav-links">
+        <a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a>
+        <a href="mailto:bhdrklkn09@gmail.com" data-en="Contact" data-tr="İletişim">Contact</a>
+      </div>
+      <div class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button id="btn-tr" class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
     </div>
   </nav>
 
   <div class="privacy-content">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: May 7, 2025</p>
+    <h1 data-en="Privacy Policy" data-tr="Gizlilik Politikası">Privacy Policy</h1>
+    <p class="last-updated" data-en="Last updated: May 7, 2025" data-tr="Son güncelleme: 7 Mayıs 2025">Last updated: May 7, 2025</p>
 
-    <p>Tennisytics ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the Tennisytics mobile application.</p>
+    <p data-en='Tennisytics ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the Tennisytics mobile application.'
+       data-tr='Tennisytics ("biz" veya "uygulama") gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Tennisytics mobil uygulamasını kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.'>
+      Tennisytics ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the Tennisytics mobile application.
+    </p>
 
-    <h2>1. Information We Collect</h2>
-    <p>We collect the following types of information:</p>
+    <h2 data-en="1. Information We Collect" data-tr="1. Topladığımız Bilgiler">1. Information We Collect</h2>
+    <p data-en="We collect the following types of information:" data-tr="Aşağıdaki türde bilgileri topluyoruz:">We collect the following types of information:</p>
     <ul>
-      <li><strong>Account information:</strong> Email address and name when you register or sign in with Google.</li>
-      <li><strong>Profile data:</strong> Your name, surname, role (coach / player / parent), and optional phone number.</li>
-      <li><strong>Match and player data:</strong> Match scores, player statistics, and related coaching data you enter into the app.</li>
-      <li><strong>Purchase information:</strong> Subscription status managed through RevenueCat. We do not store payment card details.</li>
+      <li data-en="<strong>Account information:</strong> Email address and name when you register or sign in with Google." data-tr="<strong>Hesap bilgileri:</strong> Kayıt olurken veya Google ile giriş yaparken e-posta adresiniz ve adınız."><strong>Account information:</strong> Email address and name when you register or sign in with Google.</li>
+      <li data-en="<strong>Profile data:</strong> Your name, surname, role (coach / player / parent), and optional phone number." data-tr="<strong>Profil verileri:</strong> Adınız, soyadınız, rolünüz (koç / oyuncu / veli) ve isteğe bağlı telefon numaranız."><strong>Profile data:</strong> Your name, surname, role (coach / player / parent), and optional phone number.</li>
+      <li data-en="<strong>Match and player data:</strong> Match scores, player statistics, and related coaching data you enter into the app." data-tr="<strong>Maç ve oyuncu verileri:</strong> Uygulamaya girdiğiniz maç skorları, oyuncu istatistikleri ve ilgili koçluk verileri."><strong>Match and player data:</strong> Match scores, player statistics, and related coaching data you enter into the app.</li>
+      <li data-en="<strong>Purchase information:</strong> Subscription status managed through RevenueCat. We do not store payment card details." data-tr="<strong>Satın alma bilgileri:</strong> RevenueCat aracılığıyla yönetilen abonelik durumu. Ödeme kartı bilgilerini saklamıyoruz."><strong>Purchase information:</strong> Subscription status managed through RevenueCat. We do not store payment card details.</li>
     </ul>
 
-    <h2>2. How We Use Your Information</h2>
+    <h2 data-en="2. How We Use Your Information" data-tr="2. Bilgilerinizi Nasıl Kullanıyoruz">2. How We Use Your Information</h2>
     <ul>
-      <li>To provide and maintain the app's core features (match tracking, statistics, player management).</li>
-      <li>To authenticate your account and keep your data secure.</li>
-      <li>To process in-app subscriptions.</li>
-      <li>To sync your data across devices.</li>
+      <li data-en="To provide and maintain the app's core features (match tracking, statistics, player management)." data-tr="Uygulamanın temel özelliklerini sağlamak ve sürdürmek (maç takibi, istatistikler, oyuncu yönetimi).">To provide and maintain the app's core features (match tracking, statistics, player management).</li>
+      <li data-en="To authenticate your account and keep your data secure." data-tr="Hesabınızı doğrulamak ve verilerinizi güvende tutmak.">To authenticate your account and keep your data secure.</li>
+      <li data-en="To process in-app subscriptions." data-tr="Uygulama içi abonelikleri işlemek.">To process in-app subscriptions.</li>
+      <li data-en="To sync your data across devices." data-tr="Verilerinizi cihazlar arasında senkronize etmek.">To sync your data across devices.</li>
     </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p>We use the following third-party services which may collect data as described in their own privacy policies:</p>
+    <h2 data-en="3. Third-Party Services" data-tr="3. Üçüncü Taraf Hizmetler">3. Third-Party Services</h2>
+    <p data-en="We use the following third-party services which may collect data as described in their own privacy policies:" data-tr="Kendi gizlilik politikalarında açıklandığı şekilde veri toplayabilecek aşağıdaki üçüncü taraf hizmetleri kullanıyoruz:">We use the following third-party services which may collect data as described in their own privacy policies:</p>
     <ul>
-      <li><strong>Firebase (Google):</strong> Authentication, database storage, and crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-      <li><strong>RevenueCat:</strong> In-app subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
-      <li><strong>Google Sign-In:</strong> Optional sign-in method via your Google account.</li>
-      <li><strong>Sentry:</strong> Crash and error reporting to improve app stability.</li>
+      <li data-en='<strong>Firebase (Google):</strong> Authentication, database storage, and crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>'
+          data-tr='<strong>Firebase (Google):</strong> Kimlik doğrulama, veritabanı depolama ve çökme raporlama. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik Politikası</a>'>
+        <strong>Firebase (Google):</strong> Authentication, database storage, and crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>
+      </li>
+      <li data-en='<strong>RevenueCat:</strong> In-app subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>'
+          data-tr='<strong>RevenueCat:</strong> Uygulama içi abonelik yönetimi. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Gizlilik Politikası</a>'>
+        <strong>RevenueCat:</strong> In-app subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>
+      </li>
+      <li data-en="<strong>Google Sign-In:</strong> Optional sign-in method via your Google account." data-tr="<strong>Google ile Giriş:</strong> Google hesabınız aracılığıyla isteğe bağlı giriş yöntemi."><strong>Google Sign-In:</strong> Optional sign-in method via your Google account.</li>
+      <li data-en="<strong>Sentry:</strong> Crash and error reporting to improve app stability." data-tr="<strong>Sentry:</strong> Uygulama kararlılığını artırmak için çökme ve hata raporlama."><strong>Sentry:</strong> Crash and error reporting to improve app stability.</li>
     </ul>
 
-    <h2>4. Data Retention</h2>
-    <p>Your data is retained as long as your account is active. You can delete your account at any time from the Profile screen within the app. Upon deletion, your personal data and match records are permanently removed.</p>
+    <h2 data-en="4. Data Retention" data-tr="4. Veri Saklama">4. Data Retention</h2>
+    <p data-en="Your data is retained as long as your account is active. You can delete your account at any time from the Profile screen within the app. Upon deletion, your personal data and match records are permanently removed."
+       data-tr="Verileriniz hesabınız aktif olduğu sürece saklanır. Uygulama içindeki Profil ekranından hesabınızı istediğiniz zaman silebilirsiniz. Silme işlemi sonrasında kişisel verileriniz ve maç kayıtlarınız kalıcı olarak kaldırılır.">
+      Your data is retained as long as your account is active. You can delete your account at any time from the Profile screen within the app. Upon deletion, your personal data and match records are permanently removed.
+    </p>
 
-    <h2>5. Data Security</h2>
-    <p>We use industry-standard security measures including encrypted connections (HTTPS/TLS) and Firebase security rules to protect your data from unauthorized access.</p>
+    <h2 data-en="5. Data Security" data-tr="5. Veri Güvenliği">5. Data Security</h2>
+    <p data-en="We use industry-standard security measures including encrypted connections (HTTPS/TLS) and Firebase security rules to protect your data from unauthorized access."
+       data-tr="Verilerinizi yetkisiz erişime karşı korumak için şifreli bağlantılar (HTTPS/TLS) ve Firebase güvenlik kuralları dahil endüstri standardı güvenlik önlemleri kullanıyoruz.">
+      We use industry-standard security measures including encrypted connections (HTTPS/TLS) and Firebase security rules to protect your data from unauthorized access.
+    </p>
 
-    <h2>6. Children's Privacy</h2>
-    <p>Tennisytics is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us.</p>
+    <h2 data-en="6. Children's Privacy" data-tr="6. Çocukların Gizliliği">6. Children's Privacy</h2>
+    <p data-en="Tennisytics is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us."
+       data-tr="Tennisytics, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Bir çocuğun bize kişisel bilgi verdiğini düşünüyorsanız lütfen bizimle iletişime geçin.">
+      Tennisytics is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us.
+    </p>
 
-    <h2>7. Your Rights</h2>
-    <p>You have the right to:</p>
+    <h2 data-en="7. Your Rights" data-tr="7. Haklarınız">7. Your Rights</h2>
+    <p data-en="You have the right to:" data-tr="Aşağıdaki haklara sahipsiniz:">You have the right to:</p>
     <ul>
-      <li>Access the personal data we hold about you.</li>
-      <li>Request correction of inaccurate data.</li>
-      <li>Request deletion of your data (via the "Delete Account" option in the app).</li>
+      <li data-en="Access the personal data we hold about you." data-tr="Hakkınızda tuttuğumuz kişisel verilere erişim.">Access the personal data we hold about you.</li>
+      <li data-en="Request correction of inaccurate data." data-tr="Yanlış verilerin düzeltilmesini talep etme.">Request correction of inaccurate data.</li>
+      <li data-en='Request deletion of your data (via the "Delete Account" option in the app).' data-tr='Verilerinizin silinmesini talep etme (uygulamadaki "Hesabı Sil" seçeneği aracılığıyla).'>Request deletion of your data (via the "Delete Account" option in the app).</li>
     </ul>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page.</p>
+    <h2 data-en="8. Changes to This Policy" data-tr="8. Bu Politikadaki Değişiklikler">8. Changes to This Policy</h2>
+    <p data-en="We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page."
+       data-tr="Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikleri bu sayfanın üst kısmındaki tarihi güncelleyerek size bildireceğiz.">
+      We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page.
+    </p>
 
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br/>
-    <a href="mailto:bhdrklkn09@gmail.com">bhdrklkn09@gmail.com</a></p>
+    <h2 data-en="9. Contact Us" data-tr="9. Bize Ulaşın">9. Contact Us</h2>
+    <p data-en='If you have any questions about this Privacy Policy, please contact us at:<br/><a href="mailto:bhdrklkn09@gmail.com">bhdrklkn09@gmail.com</a>'
+       data-tr='Bu Gizlilik Politikası hakkında sorularınız için bize ulaşın:<br/><a href="mailto:bhdrklkn09@gmail.com">bhdrklkn09@gmail.com</a>'>
+      If you have any questions about this Privacy Policy, please contact us at:<br/>
+      <a href="mailto:bhdrklkn09@gmail.com">bhdrklkn09@gmail.com</a>
+    </p>
   </div>
 
   <footer>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="mailto:bhdrklkn09@gmail.com">Contact</a>
+      <a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a>
+      <a href="mailto:bhdrklkn09@gmail.com" data-en="Contact" data-tr="İletişim">Contact</a>
     </div>
-    <div>© 2025 Tennisytics. All rights reserved.</div>
+    <div>© 2025 Tennisytics. <span data-en="All rights reserved." data-tr="Tüm hakları saklıdır.">All rights reserved.</span></div>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        var text = el.getAttribute('data-' + lang);
+        if (text) el.innerHTML = text;
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      localStorage.setItem('tny_lang', lang);
+    }
+    var saved = localStorage.getItem('tny_lang') || 'en';
+    setLang(saved);
+  </script>
 
 </body>
 </html>
