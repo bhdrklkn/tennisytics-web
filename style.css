@@ -33,6 +33,17 @@ nav {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 .nav-links a {
