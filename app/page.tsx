@@ -192,7 +192,13 @@ export default function Home() {
                 style={{ display: "inline-block", transition: "transform 0.15s, opacity 0.15s" }}
                 onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.opacity = "0.9"; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.opacity = "1"; }}>
-                <Image src={lang === "tr" ? "/appstore-tr.svg" : "/appstore-en.svg"} alt="App Store" width={155} height={52} />
+                <Image src={lang === "tr" ? "/appstore-tr.svg" : "/appstore-en.svg"} alt="App Store" width={151} height={40} />
+              </a>
+              <a href="#"
+                style={{ display: "inline-block", transition: "transform 0.15s, opacity 0.15s" }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.opacity = "0.9"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.opacity = "1"; }}>
+                <Image src={lang === "tr" ? "/googleplay-tr.svg" : "/googleplay-en.svg"} alt="Google Play" width={135} height={40} />
               </a>
               <a href="#pricing"
                 style={{ display: "inline-block", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "12px 22px", fontSize: 14, fontWeight: 600, color: "white", textDecoration: "none", transition: "all 0.2s" }}
