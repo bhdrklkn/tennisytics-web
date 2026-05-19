@@ -176,11 +176,7 @@ export default function Home() {
             initial="hidden" animate="show" variants={stagger}
             style={{ flex: "1 1 400px", minWidth: 280 }}
           >
-            <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
-              <span style={{ display: "inline-block", background: "rgba(200,232,75,0.2)", border: "1px solid rgba(200,232,75,0.4)", borderRadius: 20, padding: "6px 16px", fontSize: 13, fontWeight: 600, marginBottom: 28, letterSpacing: 0.5, color: "#C8E84B" }}>
-                {c.badge}
-              </span>
-            </motion.div>
+
             <motion.h1 variants={fadeUp} transition={{ duration: 0.5 }}
               style={{ fontSize: "clamp(36px, 5.5vw, 58px)", fontWeight: 900, lineHeight: 1.08, marginBottom: 20, letterSpacing: -1.5 }}>
               {c.h1a}<br />
@@ -214,7 +210,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             style={{ flex: "0 0 auto", display: "flex", justifyContent: "center", paddingBottom: 32 }}
           >
-            <PhoneMockup />
+            <PhoneMockup lang={lang as "tr" | "en"} />
           </motion.div>
         </div>
       </section>
