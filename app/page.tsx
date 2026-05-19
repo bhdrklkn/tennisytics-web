@@ -146,7 +146,12 @@ export default function Home() {
 
   useEffect(() => {
     const saved = localStorage.getItem("tny_lang");
-    if (saved === "tr" || saved === "en") setLang(saved);
+    if (saved === "tr" || saved === "en") {
+      setLang(saved);
+    } else {
+      const browserLang = navigator.language || "";
+      setLang(browserLang.toLowerCase().startsWith("tr") ? "tr" : "en");
+    }
     const handler = (e: Event) => setLang((e as CustomEvent).detail);
     window.addEventListener("langchange", handler);
     return () => window.removeEventListener("langchange", handler);
