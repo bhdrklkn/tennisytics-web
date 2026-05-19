@@ -197,7 +197,7 @@ export default function Home() {
                 style={{ display: "inline-block", transition: "transform 0.15s, opacity 0.15s" }}
                 onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.opacity = "0.9"; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.opacity = "1"; }}>
-                <Image src={lang === "tr" ? "/appstore-tr.svg" : "/appstore-en.svg"} alt="App Store" width={151} height={40} />
+                <Image src={lang === "tr" ? "/appstore-tr.svg" : "/appstore-en.svg"} alt="App Store" width={135} height={40} />
               </a>
               <a href="#"
                 style={{ display: "inline-block", transition: "transform 0.15s, opacity 0.15s" }}
