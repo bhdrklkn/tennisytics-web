@@ -31,7 +31,7 @@ export default function Footer() {
           <Image src="/instagram.svg" alt="Instagram" width={20} height={20} />
         </a>
       </div>
-      <div>© 2025 Tennisytics. {lang === "tr" ? "Tüm hakları saklıdır." : "All rights reserved."}</div>
+      <div>© 2026 Tennisytics. {lang === "tr" ? "Tüm hakları saklıdır." : "All rights reserved."}</div>
     </footer>
   );
 }
