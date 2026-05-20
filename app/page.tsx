@@ -210,12 +210,6 @@ export default function Home() {
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.opacity = "1"; }}>
                 <Image src={lang === "tr" ? "/googleplay-tr.svg" : "/googleplay-en.svg"} alt="Google Play" width={162} height={48} />
               </a>
-              <a href="#pricing"
-                style={{ display: "inline-block", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "12px 22px", fontSize: 14, fontWeight: 600, color: "white", textDecoration: "none", transition: "all 0.2s" }}
-                onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.18)"; }}
-                onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}>
-                {c.ctaFree} →
-              </a>
             </motion.div>
           </motion.div>
 
