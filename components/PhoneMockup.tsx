@@ -9,14 +9,22 @@ interface Props {
 
 const screens = {
   tr: [
-    { label: "Canlı Maç", src: "/screenshots/tr-match.png" },
-    { label: "İstatistikler", src: "/screenshots/tr-stats.png" },
-    { label: "Oyuncular", src: "/screenshots/tr-players.png" },
+    { label: "Ana Sayfa",          src: "/screenshots/tr-home.png" },
+    { label: "Oyuncular",          src: "/screenshots/tr-players.png" },
+    { label: "Maçlar",             src: "/screenshots/tr-matches.png" },
+    { label: "Kazanma Oranı",      src: "/screenshots/tr-stats-trend.png" },
+    { label: "Servis",             src: "/screenshots/tr-stats-serve.png" },
+    { label: "Hata Analizi",       src: "/screenshots/tr-stats-error.png" },
+    { label: "Vuruş Analizi",      src: "/screenshots/tr-stats-stroke.png" },
   ],
   en: [
-    { label: "Live Match", src: "/screenshots/en-match.png" },
-    { label: "Statistics", src: "/screenshots/en-stats.png" },
-    { label: "Players", src: "/screenshots/en-players.png" },
+    { label: "Home",           src: "/screenshots/tr-home.png" },
+    { label: "Players",        src: "/screenshots/tr-players.png" },
+    { label: "Matches",        src: "/screenshots/tr-matches.png" },
+    { label: "Win Rate",       src: "/screenshots/tr-stats-trend.png" },
+    { label: "Serve",          src: "/screenshots/tr-stats-serve.png" },
+    { label: "Error Analysis", src: "/screenshots/tr-stats-error.png" },
+    { label: "Stroke Analysis",src: "/screenshots/tr-stats-stroke.png" },
   ],
 };
 
@@ -34,7 +42,7 @@ export default function PhoneMockup({ lang = "en" }: Props) {
   }, [list.length]);
 
   return (
-    <div style={{ position: "relative", width: 200, height: 400, flexShrink: 0 }}>
+    <div style={{ position: "relative", width: 380, height: 760, flexShrink: 0 }}>
       {/* Phone frame */}
       <div style={{
         position: "absolute", inset: 0,
@@ -64,7 +72,7 @@ export default function PhoneMockup({ lang = "en" }: Props) {
             <img
               src={list[current].src}
               alt={list[current].label}
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 85%", display: "block" }}
             />
           </motion.div>
         </AnimatePresence>
