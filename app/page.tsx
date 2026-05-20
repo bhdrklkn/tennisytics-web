@@ -180,7 +180,11 @@ export default function Home() {
         overflow: "hidden",
         maxWidth: "100vw",
       }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 60, flexWrap: "wrap" }}>
+        <style>{`
+          .hero-inner { display:flex; align-items:center; justify-content:space-between; gap:60px; flex-wrap:wrap; max-width:1100px; margin:0 auto; }
+          @media (max-width:768px) { .hero-inner { justify-content:center; } .hero-inner > div:last-child { width:100%; display:flex; justify-content:center; } }
+        `}</style>
+        <div className="hero-inner">
           {/* Left */}
           <motion.div
             initial="hidden" animate="show" variants={stagger}
