@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -169,15 +170,18 @@ const content = {
 };
 
 export default function PrivacyPage() {
+  const searchParams = useSearchParams();
   const [lang, setLang] = useState<"en" | "tr">("en");
 
   useEffect(() => {
+    const param = searchParams.get("lang");
+    if (param === "tr" || param === "en") { setLang(param); return; }
     const saved = localStorage.getItem("tny_lang");
     if (saved === "tr" || saved === "en") setLang(saved);
     const handler = (e: Event) => setLang((e as CustomEvent).detail);
     window.addEventListener("langchange", handler);
     return () => window.removeEventListener("langchange", handler);
-  }, []);
+  }, [searchParams]);
 
   const c = content[lang];
 
