@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const content = {
   en: {
     title: "Privacy Policy",
-    updated: "Last updated: May 7, 2025",
+    updated: "Last updated: May 20, 2025",
     intro: `Tennisytics ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the Tennisytics mobile application.`,
     sections: [
       {
@@ -66,14 +66,26 @@ const content = {
         text: "We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page.",
       },
       {
-        title: "9. Contact Us",
+        title: "9. GDPR / KVKK Rights",
+        text: "If you are located in Turkey or the European Economic Area, you have the following additional rights:",
+        items: [
+          "Right to access — request a copy of the personal data we hold about you.",
+          "Right to rectification — request correction of inaccurate or incomplete data.",
+          "Right to erasure — request deletion of your data (available via 'Delete Account' in the app).",
+          "Right to data portability — receive your data in a structured, machine-readable format.",
+          "Right to object — object to processing of your data in certain circumstances.",
+          "Right to lodge a complaint — with a supervisory authority (in Turkey: KVKK, <a href='https://kvkk.gov.tr' target='_blank' style='color:var(--primary)'>kvkk.gov.tr</a>).",
+        ],
+      },
+      {
+        title: "10. Contact Us",
         text: `If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:bhdrklkn09@gmail.com" style="color:var(--primary)">bhdrklkn09@gmail.com</a>`,
       },
     ],
   },
   tr: {
     title: "Gizlilik Politikası",
-    updated: "Son güncelleme: 7 Mayıs 2025",
+    updated: "Son güncelleme: 20 Mayıs 2025",
     intro: `Tennisytics ("biz" veya "uygulama") gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Tennisytics mobil uygulamasını kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.`,
     sections: [
       {
@@ -131,7 +143,25 @@ const content = {
         text: "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikleri bu sayfanın üst kısmındaki tarihi güncelleyerek size bildireceğiz.",
       },
       {
-        title: "9. Bize Ulaşın",
+        title: "9. KVKK Kapsamında Haklarınız",
+        text: "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) madde 11 kapsamında aşağıdaki haklara sahipsiniz:",
+        items: [
+          "Kişisel verilerinizin işlenip işlenmediğini öğrenme.",
+          "Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme.",
+          "Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme.",
+          "Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme.",
+          "Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme.",
+          "Kişisel verilerin silinmesini veya yok edilmesini isteme (uygulamadaki 'Hesabı Sil' seçeneği aracılığıyla).",
+          "İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonuç ortaya çıkmasına itiraz etme.",
+          "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.",
+        ],
+      },
+      {
+        title: "10. Veri Sorumlusu",
+        text: `Bu uygulama kapsamında veri sorumlusu sıfatıyla hareket eden kişiye şu adresten ulaşabilirsiniz: <a href="mailto:bhdrklkn09@gmail.com" style="color:var(--primary)">bhdrklkn09@gmail.com</a>. KVKK kapsamındaki başvurularınızı da aynı adres üzerinden iletebilirsiniz. Kişisel Verileri Koruma Kurumu'na (KVKK) şikâyet için: <a href="https://kvkk.gov.tr" target="_blank" style="color:var(--primary)">kvkk.gov.tr</a>`,
+      },
+      {
+        title: "11. Bize Ulaşın",
         text: `Bu Gizlilik Politikası hakkında sorularınız için bize ulaşın: <a href="mailto:bhdrklkn09@gmail.com" style="color:var(--primary)">bhdrklkn09@gmail.com</a>`,
       },
     ],

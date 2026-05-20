@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TennisBallCanvas from "@/components/TennisBallCanvas";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Tennisytics – Tennis Analytics for Coaches",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div style={{ position: "relative", zIndex: 1 }}>
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );

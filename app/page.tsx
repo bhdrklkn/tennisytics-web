@@ -5,30 +5,32 @@ import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import PhoneMockup from "@/components/PhoneMockup";
+import { Zap, BarChart2, Users, Radio, WifiOff, Trophy, Activity, ClipboardList, TrendingUp } from "lucide-react";
 
 const t = {
   en: {
     badge: "🎾 Tennis Analytics App",
-    h1a: "The smarter way to",
-    h1b: "coach tennis",
-    sub: "Track matches in real time, analyze player statistics, and take your coaching to the next level.",
+    h1a: "Track, analyze and",
+    h1b: "improve your tennis",
+    sub: "For coaches, players and parents. Record matches in real time, analyze statistics, and follow every point — all in one app.",
     ctaDownload: "Download on App Store",
     ctaFree: "Start for Free",
     howTitle: "How It Works",
-    howSub: "Three Simple Steps to Transform Your Coaching",
+    howSub: "Three Simple Steps — For Coaches, Players & Parents",
     howSteps: [
       { step: "01", title: "Start a Match", desc: "Tap to begin tracking any match. Set players, surface, and format in seconds.", icon: "🎾" },
       { step: "02", title: "Record Every Point", desc: "Tap after each point to log serve type, rally length, winner, and error type.", icon: "📊" },
       { step: "03", title: "Analyze & Improve", desc: "Get instant stats: win rates, serve percentages, break points, and player trends.", icon: "📈" },
     ],
-    featuresTitle: "Everything a Coach Needs",
+    featuresTitle: "Everything Tennis Needs",
     featuresSub: "From Live Scoring to Deep Statistics — All in One App",
     features: [
-      { icon: "⚡", title: "Live Match Tracking", desc: "Score points in real time with a single tap. Automatic set and match calculation." },
-      { icon: "📈", title: "Player Statistics", desc: "Win rates, first serve percentages, ace counts, and detailed match history for every player." },
-      { icon: "👥", title: "Player Profiles", desc: "Manage your entire roster. Track each player's progress over time." },
-      { icon: "📡", title: "Instant Sharing", desc: "Share live match links with parents so they can follow the score in real time." },
+      { icon: "⚡", title: "Live Match Tracking", desc: "Just record the points — the app handles the rest. Score, sets, and match result update instantly." },
+      { icon: "📈", title: "Player Statistics", desc: "Win rates, serve stats, error breakdowns, and detailed match history for every player." },
+      { icon: "👥", title: "Player Profiles", desc: "Build player profiles and track progress over time — for your whole squad or just yourself." },
+      { icon: "📡", title: "Instant Sharing", desc: "Share live match links with parents or coaches so they can follow the score in real time." },
       { icon: "🔄", title: "Works Offline", desc: "Record matches without internet. Data syncs automatically when you're back online." },
       { icon: "🏆", title: "Head-to-Head Stats", desc: "Compare two players and see detailed opponent history." },
     ],
@@ -40,12 +42,13 @@ const t = {
     perMonth: "per month",
     perYear: "or $29.99/year",
     mostPopular: "Most Popular",
-    freePlan: ["4 player profiles", "12 matches per month", "Full statistics", "Live match sharing"],
+    freePlan: ["4 player profiles", "Up to 12 matches", "Full statistics", "Live match sharing"],
     premiumPlan: ["Unlimited players", "Unlimited matches", "Full statistics", "Live match sharing"],
+    stepLabel: "STEP",
     faqTitle: "Frequently Asked Questions",
     faqSub: "Everything You Need to Know About Tennisytics",
     faqs: [
-      { q: "What's the difference between Free and Premium?", a: "The Free plan lets you manage up to 4 players and 12 matches per month — perfect to get started. Premium removes all limits so you can track every match, every player, with no restrictions." },
+      { q: "What's the difference between Free and Premium?", a: "The Free plan lets you manage up to 4 players and 12 matches total — perfect to get started. Premium removes all limits so you can track every match, every player, with no restrictions." },
       { q: "Is it available on iPhone and Android?", a: "Currently available on iOS (iPhone). Android support is coming soon. Stay tuned!" },
       { q: "Does it work without internet?", a: "Yes. You can record full matches offline. Everything syncs automatically the next time you're connected." },
       { q: "Is my data safe?", a: "All data is stored securely on Firebase (Google Cloud). Your match data is private and only accessible to you." },
@@ -54,25 +57,25 @@ const t = {
   },
   tr: {
     badge: "🎾 Tenis Analiz Uygulaması",
-    h1a: "Tenis koçluğunun",
-    h1b: "akıllı yolu",
-    sub: "Maçları gerçek zamanlı takip et, oyuncu istatistiklerini analiz et ve koçluğunu bir üst seviyeye taşı.",
+    h1a: "Takip et, analiz et,",
+    h1b: "tenisin akıllı yolu",
+    sub: "Antrenörler, oyuncular ve veliler için. Maçları gerçek zamanlı kaydet, istatistikleri analiz et, her puanı takip et — hepsi tek uygulamada.",
     ctaDownload: "App Store'dan İndir",
     ctaFree: "Ücretsiz Başla",
     howTitle: "Nasıl Çalışır?",
-    howSub: "Koçluğunu Dönüştürecek Üç Basit Adım",
+    howSub: "Üç Basit Adım — Antrenörler, Oyuncular & Veliler İçin",
     howSteps: [
       { step: "01", title: "Maç Başlat", desc: "Herhangi bir maçı takip etmek için dokun. Oyuncuları, zemini ve formatı saniyeler içinde ayarla.", icon: "🎾" },
       { step: "02", title: "Her Puanı Kaydet", desc: "Her puan sonrası dokun: servis türü, ralli uzunluğu, winner ve hata türünü kaydet.", icon: "📊" },
       { step: "03", title: "Analiz Et & Geliş", desc: "Anında istatistik al: kazanma oranları, servis yüzdeleri, break puanları ve oyuncu trendleri.", icon: "📈" },
     ],
-    featuresTitle: "Bir Koçun İhtiyacı Olan Her Şey",
+    featuresTitle: "Tenisin İhtiyacı Olan Her Şey",
     featuresSub: "Canlı Skordan Detaylı İstatistiklere — Hepsi Tek Uygulamada",
     features: [
-      { icon: "⚡", title: "Canlı Maç Takibi", desc: "Tek dokunuşla gerçek zamanlı skor tut. Otomatik set ve maç hesaplama." },
-      { icon: "📈", title: "Oyuncu İstatistikleri", desc: "Kazanma oranları, ilk servis yüzdeleri, as sayıları ve her oyuncu için detaylı maç geçmişi." },
-      { icon: "👥", title: "Oyuncu Profilleri", desc: "Tüm oyuncu kadronunu yönet. Her oyuncunun gelişimini zaman içinde takip et." },
-      { icon: "📡", title: "Anlık Paylaşım", desc: "Velilerle canlı maç linkini paylaş, skoru gerçek zamanlı takip etsinler." },
+      { icon: "⚡", title: "Canlı Maç Takibi", desc: "Sadece puanları kaydet, gerisini uygulama halleder. Skor, set ve maç sonucu anlık güncellenir." },
+      { icon: "📈", title: "Oyuncu İstatistikleri", desc: "Kazanma oranları, servis istatistikleri, hata analizleri ve her oyuncu için detaylı maç geçmişi." },
+      { icon: "👥", title: "Oyuncu Profilleri", desc: "Oyuncu profili oluştur ve gelişimi takip et — tüm ekip için ya da sadece kendin için." },
+      { icon: "📡", title: "Anlık Paylaşım", desc: "Canlı maç linkini velilerle veya antrenörle paylaş, skoru gerçek zamanlı takip etsinler." },
       { icon: "🔄", title: "Çevrimdışı Çalışır", desc: "İnternetsiz maç kaydet. Bağlantıya geçince veriler otomatik senkronize olur." },
       { icon: "🏆", title: "Karşılıklı İstatistikler", desc: "İki oyuncuyu karşılaştır ve detaylı rakip geçmişini gör." },
     ],
@@ -84,12 +87,13 @@ const t = {
     perMonth: "aylık",
     perYear: "veya $29.99/yıl",
     mostPopular: "En Popüler",
-    freePlan: ["4 oyuncu profili", "Aylık 12 maç", "Tüm istatistikler", "Canlı maç paylaşımı"],
+    freePlan: ["4 oyuncu profili", "12 maça kadar", "Tüm istatistikler", "Canlı maç paylaşımı"],
     premiumPlan: ["Sınırsız oyuncu", "Sınırsız maç", "Tüm istatistikler", "Canlı maç paylaşımı"],
+    stepLabel: "ADIM",
     faqTitle: "Sık Sorulan Sorular",
     faqSub: "Tennisytics Hakkında Bilmek İstediğin Her Şey",
     faqs: [
-      { q: "Ücretsiz ve Premium arasındaki fark nedir?", a: "Ücretsiz plan ayda 4 oyuncu ve 12 maça kadar izin verir — başlamak için mükemmel. Premium tüm limitleri kaldırır, sınırsız maç ve oyuncu takibi sağlar." },
+      { q: "Ücretsiz ve Premium arasındaki fark nedir?", a: "Ücretsiz plan toplam 4 oyuncu ve 12 maça kadar izin verir — başlamak için mükemmel. Premium tüm limitleri kaldırır, sınırsız maç ve oyuncu takibi sağlar." },
       { q: "iPhone ve Android'de var mı?", a: "Şu an iOS (iPhone) için mevcut. Android desteği çok yakında geliyor!" },
       { q: "İnternetsiz çalışıyor mu?", a: "Evet. Maçları tamamen çevrimdışı kaydedebilirsin. Her şey bir sonraki bağlantıda otomatik senkronize olur." },
       { q: "Verilerim güvende mi?", a: "Tüm veriler Firebase (Google Cloud) üzerinde güvenli şekilde saklanır. Maç verilerine sadece sen erişebilirsin." },
@@ -174,6 +178,7 @@ export default function Home() {
         color: "white",
         padding: "90px 24px 110px",
         overflow: "hidden",
+        maxWidth: "100vw",
       }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 60, flexWrap: "wrap" }}>
           {/* Left */}
@@ -243,9 +248,13 @@ export default function Home() {
                 key={i}
                 style={{ x: steps[i].x, opacity: steps[i].op, display: "flex", alignItems: "center", gap: 24, background: "rgba(255,255,255,0.05)", borderRadius: 20, padding: "28px 32px", textAlign: "left", border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <div style={{ fontSize: 36, flexShrink: 0 }}>{step.icon}</div>
+                <div style={{ width: 52, height: 52, borderRadius: 16, background: "rgba(200,232,75,0.15)", border: "1px solid rgba(200,232,75,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    {i === 0 && <Activity size={26} color="#C8E84B" strokeWidth={1.8} />}
+                    {i === 1 && <ClipboardList size={26} color="#C8E84B" strokeWidth={1.8} />}
+                    {i === 2 && <TrendingUp size={26} color="#C8E84B" strokeWidth={1.8} />}
+                  </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: "#C8E84B", letterSpacing: 2, marginBottom: 6 }}>STEP {step.step}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#C8E84B", letterSpacing: 2, marginBottom: 6 }}>{c.stepLabel} {step.step}</div>
                   <div style={{ fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>{step.title}</div>
                   <div style={{ fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{step.desc}</div>
                 </div>
@@ -271,8 +280,13 @@ export default function Home() {
               <motion.div key={i} variants={fadeUp} transition={{ duration: 0.4 }}
                 whileHover={{ y: -6, scale: 1.02, boxShadow: "0 16px 40px rgba(49,56,81,0.15)" }}
                 style={{ background: "white", borderRadius: 18, padding: "32px 24px", textAlign: "left", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid rgba(49,56,81,0.06)", transition: "border-color 0.2s", cursor: "default" }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, marginBottom: 16 }}>
-                  {f.icon}
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+                  {i === 0 && <Zap size={22} color="white" strokeWidth={1.8} />}
+                  {i === 1 && <BarChart2 size={22} color="white" strokeWidth={1.8} />}
+                  {i === 2 && <Users size={22} color="white" strokeWidth={1.8} />}
+                  {i === 3 && <Radio size={22} color="white" strokeWidth={1.8} />}
+                  {i === 4 && <WifiOff size={22} color="white" strokeWidth={1.8} />}
+                  {i === 5 && <Trophy size={22} color="white" strokeWidth={1.8} />}
                 </div>
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--primary)", marginBottom: 8 }}>{f.title}</h3>
                 <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.65 }}>{f.desc}</p>
@@ -365,6 +379,7 @@ export default function Home() {
         </div>
       </section>
 
+      <ContactForm lang={lang as "tr" | "en"} />
       <Footer />
     </>
   );

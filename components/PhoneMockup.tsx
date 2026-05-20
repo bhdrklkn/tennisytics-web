@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface Props {
   lang?: "tr" | "en";
@@ -42,7 +43,7 @@ export default function PhoneMockup({ lang = "en" }: Props) {
   }, [list.length]);
 
   return (
-    <div style={{ position: "relative", width: 380, height: 760, flexShrink: 0 }}>
+    <div className="phone-mockup-wrap" style={{ position: "relative", flexShrink: 0 }}>
       {/* Phone frame */}
       <div style={{
         position: "absolute", inset: 0,
@@ -68,11 +69,12 @@ export default function PhoneMockup({ lang = "en" }: Props) {
             transition={{ duration: 0.4 }}
             style={{ position: "absolute", inset: 0 }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={list[current].src}
               alt={list[current].label}
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 85%", display: "block" }}
+              fill
+              style={{ objectFit: "cover", objectPosition: "50% 85%" }}
+              sizes="380px"
             />
           </motion.div>
         </AnimatePresence>
@@ -83,6 +85,18 @@ export default function PhoneMockup({ lang = "en" }: Props) {
           <div key={i} onClick={() => setCurrent(i)} style={{ width: i === current ? 16 : 6, height: 6, borderRadius: 3, background: i === current ? "#C8E84B" : "rgba(255,255,255,0.3)", transition: "all 0.3s", cursor: "pointer" }} />
         ))}
       </div>
+      <style>{`
+        .phone-mockup-wrap {
+          width: 380px;
+          height: 760px;
+        }
+        @media (max-width: 640px) {
+          .phone-mockup-wrap {
+            width: min(300px, 80vw);
+            height: min(600px, 160vw);
+          }
+        }
+      `}</style>
     </div>
   );
 }
